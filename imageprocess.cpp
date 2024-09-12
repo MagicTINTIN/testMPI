@@ -59,12 +59,22 @@ double randDouble(const double & min, const double & max) {
 
 double calculateAveragePi(int dividedBy)
 {
-    size_t totalPoints = 100000;
+    size_t totalPoints = 10000000000;
     size_t withinCircle = 0;
+    
+    std::random_device rd;
+    std::mt19937 e2(rd());
+    std::uniform_real_distribution<> dist(0, 1);
+
+
     for (size_t i = 0; i < totalPoints; i++)
     {
-        double x = randDouble(0., 1.);
-        double y = randDouble(0., 1.);
+        // double x = randDouble(0., 1.);
+        // double y = randDouble(0., 1.);
+        double x = dist(e2);
+        double y = dist(e2);
+        // double x=(double)rand()/(double)RAND_MAX;
+        // double y=(double)rand()/(double)RAND_MAX;
         double distance2 = x*x+y*y;
 
         if (distance2 < 1)

@@ -13,7 +13,7 @@ processToSpawn=1
 if [[ $1 == "single" ]]; then
     processToSpawn=1
 elif [[ $1 == "mega" ]]; then
-    processToSpawn=150
+    processToSpawn=180
 elif [[ $1 == "custom" ]]; then
     processToSpawn=8
 else

@@ -4,6 +4,7 @@
 #include <mpi.h>
 #include <iomanip>
 #include <fstream>
+#include <limits> 
 #include "imageprocess.h"
 #include "includes/nlohmann/json.hpp"
 
@@ -167,7 +168,7 @@ int main(int argc, char const *argv[])
 			if (averagesPiParts[i] != -1)
 			{
 				double val = averagesPiParts[i];
-				std::cout << "Process n°" << i << " : pi:" << val * totalProcesses << std::endl;
+				std::cout << "Process n°" << i << " : pi:" << std::fixed << std::setprecision(10) << val * totalProcesses << std::endl;
 
 				values += val;
 				// receivedProcesses++;
@@ -176,7 +177,7 @@ int main(int argc, char const *argv[])
 		// if (receivedProcesses > 0)
 		// 	values /= receivedProcesses;
 		// long averageHex = combineColors(values);
-		std::cout << "Global average pi value: " << values << std::endl;
+		std::cout << "Global average pi value: " << std::fixed << std::setprecision(std::numeric_limits<double>::max_digits10) << values << std::endl;
 
 		std::cout << "Time elapsed: " << stopTime - startTime << "s" << std::endl;
 
