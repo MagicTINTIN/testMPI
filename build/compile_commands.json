@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/serviere/code/testMPI/build",
+  "command": "mpicxx  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -g -std=gnu++20 -o CMakeFiles/ImageProcessLib.dir/imageprocess.cpp.o -c /home/serviere/code/testMPI/imageprocess.cpp",
+  "file": "/home/serviere/code/testMPI/imageprocess.cpp"
+},
+{
+  "directory": "/home/serviere/code/testMPI/build",
+  "command": "mpicxx  -I/usr/lib/x86_64-linux-gnu/openmpi/include -I/usr/lib/x86_64-linux-gnu/openmpi/include/openmpi -g -std=gnu++20 -o CMakeFiles/MPIFarm.dir/main.cpp.o -c /home/serviere/code/testMPI/main.cpp",
+  "file": "/home/serviere/code/testMPI/main.cpp"
+}
+]
