@@ -57,12 +57,18 @@ double randDouble(const double & min, const double & max) {
     return distribution(generator);
 }
 
-double calculateAveragePi(int dividedBy)
+double newcalculateAveragePi(int dividedBy)
 {
+    int l=0;
+    for (size_t i = 0; i < 1000000000; i++)
+    {
+        l+=i;
+    }
+    
     return 1;
 }
 
-double oldcalculateAveragePi(int dividedBy)
+double calculateAveragePi(int dividedBy)
 {
     long long totalPoints = 1000000000;
     long long withinCircle = 0;

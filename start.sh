@@ -8,6 +8,7 @@ if [[ $# != 2 && $# != 3 && $# != 4 ]]; then
     exit 1
 fi
 
+SLOT_SUMS=0
 processToSpawn=1
 
 if [[ $1 == "single" ]]; then
@@ -17,7 +18,10 @@ elif [[ $1 == "mega" ]]; then
 elif [[ $1 == "custom" ]]; then
     processToSpawn=8
 elif [[ $1 == "ss" ]]; then
+    SLOT_SUMS=`./countSlots.sh hostConfigs/h_ss.cfg`
     
+    echo "Detecting $SLOT_SUMS slots"
+    processToSpawn=$SLOT_SUMS
 else
     echo -ne "$(tput setaf 9)"
     echo "ERROR: cluster_type not recognized"
@@ -41,3 +45,4 @@ echo -ne "$(tput setaf 3)"
 echo "> mpirun -hostfile hostConfigs/h_$1.cfg --map-by node -np $processToSpawn build/MPIFarm $2 $benchmarkarg"
 echo -ne "$(tput sgr0)"
 mpirun -hostfile hostConfigs/h_$1.cfg --map-by node -np $processToSpawn build/MPIFarm $2 $benchmarkarg
+# --host 10.1.15.4

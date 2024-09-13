@@ -17,6 +17,10 @@ sum=0
 
 # Read each line of the file
 while read -r line; do
+    if [[ "$line" =~ ^# ]]; then
+        continue
+    fi
+
     # Extract the slot_value using grep and sed
     slot_value=$(echo "$line" | grep -oP '(?<=#)\d{1,2}')
     
@@ -24,8 +28,9 @@ while read -r line; do
     if [[ $slot_value -ge 1 && $slot_value -le 20 ]]; then
         sum=$((sum + slot_value))
     fi
-    echo "Total sum of slot values: $sum"
+    # echo "Total sum of slot values: $sum"
 done < "$1"
-
+# SLOT_SUMS=$sum
 # Output the sum
-echo "Total sum of slot values: $sum"
+# echo "Total sum of slot values: $sum"
+echo $sum
