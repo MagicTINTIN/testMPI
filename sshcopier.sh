@@ -13,6 +13,8 @@ read startProg
 if [[ $startProg == "y" ]]; then
     echo "Starting..."
     for ((i = START; i <= END; i++)); do
+    echo "##################################### $PREF.$i #################################################"
+        ssh-keygen -f "/home/serviere/.ssh/known_hosts" -R "$PREF.$i"
         ssh-copy-id $PREF.$i
     done
     echo "END. Exiting..."
