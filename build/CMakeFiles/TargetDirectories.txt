@@ -1,4 +1,0 @@
-/home/serviere/code/testMPI/build/CMakeFiles/ImageProcessLib.dir
-/home/serviere/code/testMPI/build/CMakeFiles/MPIFarm.dir
-/home/serviere/code/testMPI/build/CMakeFiles/edit_cache.dir
-/home/serviere/code/testMPI/build/CMakeFiles/rebuild_cache.dir
