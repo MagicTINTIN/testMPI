@@ -16,6 +16,8 @@ elif [[ $1 == "mega" ]]; then
     processToSpawn=180
 elif [[ $1 == "custom" ]]; then
     processToSpawn=8
+elif [[ $1 == "ss" ]]; then
+    
 else
     echo -ne "$(tput setaf 9)"
     echo "ERROR: cluster_type not recognized"
