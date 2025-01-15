@@ -17,8 +17,8 @@ elif [[ $1 == "mega" ]]; then
     processToSpawn=180
 elif [[ $1 == "custom" ]]; then
     processToSpawn=8
-elif [[ $1 == "ss" ]]; then
-    SLOT_SUMS=`./countSlots.sh hostConfigs/h_ss.cfg`
+elif [[ $1 == "ss"* ]]; then
+    SLOT_SUMS=`./countSlots.sh hostConfigs/h_$1.cfg`
     
     echo "Detecting $SLOT_SUMS slots"
     processToSpawn=$SLOT_SUMS
