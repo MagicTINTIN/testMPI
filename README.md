@@ -1,5 +1,5 @@
-# MPIFarm
-Is a project of render farm working with Open MPI.
+# testMPI
+A repo to easily test concurrent programs on computer clusters
 
 ## Requirements
 Open MPI is only available on Linux.<br>
